@@ -1,0 +1,30 @@
+<div id="panelForm" >
+    <div class="form" >
+        <h2>Log in</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="singIn()" >
+            <div class="input">
+                 <label for="email" >Login</label>
+                 <input type="text" id="email" formControlName="email"  >
+                 <ng-container *ngIf="loginForm.controls['email'].invalid&&(loginForm.controls['email'].touched||loginForm.controls['email'].dirty)">
+                    <div *ngIf="loginForm.controls['email'].errors?.['required']" class="error">
+                        Field required
+                    </div>
+                 </ng-container>
+            </div>
+            <div class="input">
+                <label for="password" >Password</label>
+                <input type="password" id="password" formControlName="password" >
+                <ng-container *ngIf="loginForm.controls['password'].invalid&&(loginForm.controls['password'].touched||loginForm.controls['password'].dirty)">
+                    <div *ngIf="loginForm.controls['password'].errors?.['required']" class="error">
+                        Field required
+                    </div>
+                </ng-container>
+           </div>
+           <div class="button">
+                <button type="submit" [disabled]="!loginForm.valid" >Sing in</button>
+           </div>
+           <p>Form Status: {{ loginForm.status }}</p>
+           <p>Form Erros: {{ loginForm.errors | json }}</p>
+        </form>
+    </div>
+</div>

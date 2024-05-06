@@ -1,0 +1,29 @@
+#topMenu{
+    background-color: #9370DB;
+    padding: 15px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menuLeft{
+    width: 70%;
+    justify-content: flex-start;
+}
+
+#menuRight{
+    width: 30%;
+    justify-content: flex-end;
+}
+
+.topSubMenu{
+    display: flex;
+}
+
+.itemMenu{
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    margin: 5px;
+}

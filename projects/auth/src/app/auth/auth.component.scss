@@ -1,0 +1,33 @@
+#panelForm{
+    max-width: 500px;
+    background: #fff;
+    margin: 150px auto;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: rgb(0, 0, 0, 0.6);
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .input{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-direction: column;
+        font-weight: 700;
+        color: #666;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        button{
+            background-color: #9370DB;
+        }
+    }
+}
